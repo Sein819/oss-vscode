@@ -1,33 +1,38 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "save and compile for C++",
-            "type": "shell",
-            "command": "g++",
-            "args": [
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
-            "group": "build"
-        },
-        {
-            "label": "save and compile for C",
-            "type": "shell",
-            "command": "gcc",
-            "args": [
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
-            "group": "build"
-        },
-        {
-            "label": "execute",
-            "type": "shell",
-            "command": "${fileDirname}/${fileBasenameNoExtension}",
-            "group": "test"
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "save and compile for C++",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "group": "build",
+      "presentation": { "reveal": "always", "panel": "shared" },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "save and compile for C",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "group": "build",
+      "presentation": { "reveal": "always", "panel": "shared" },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "execute",
+      "type": "shell",
+      "command": "${fileDirname}/${fileBasenameNoExtension}",
+      "group": "test",
+      "presentation": { "reveal": "always", "panel": "shared", "echo": true }
+    }
+  ]
 }
