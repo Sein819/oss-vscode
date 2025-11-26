@@ -29,4 +29,4 @@ what do u want
 
 - [x] no
 
-[youtube](naver.com)
+[youtube](https://naver.com)
